@@ -4,11 +4,8 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 def multiple_3_or_5(num):
-    arr = []
-    for i in range(num):
-        if i % 3 == 0 or i % 5 == 0:
-           arr.append(i)
+    arr = [i for i in range(num) if i % 3 == 0 or i % 5 == 0]
     total = sum(arr)
-    print(total)
+    return total
 
-multiple_3_or_5(1000)
+print(multiple_3_or_5(1000))
