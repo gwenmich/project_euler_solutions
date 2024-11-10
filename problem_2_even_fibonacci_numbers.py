@@ -4,10 +4,16 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the
 # even-valued terms.
 
-def even_fibonacci(num):
+# https://projecteuler.net/problem=2
+
+def even_fibonacci():
+    fib_num = [1, 2]
+    while fib_num[-1] < 4_000_000:
+        x = fib_num[-1] + fib_num[-2]
+        fib_num.append(x)
+
+    even_fib_sum = sum([i for i in fib_num if i % 2 == 0])
+    return even_fib_sum
 
 
-
-
-
-even_fibonacci(4_000_000)
+print(even_fibonacci())
